@@ -9,4 +9,4 @@ FROM
 WHERE
     github IS NULL
 ORDER BY
-    cohort_id
+    cohort_id;
