@@ -5,4 +5,4 @@ SELECT
 FROM
     students
 WHERE
-    github IS Null;
+    github IS Null
