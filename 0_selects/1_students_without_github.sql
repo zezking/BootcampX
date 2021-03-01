@@ -1,1 +1,1 @@
-SELECT id, name, email, cohort_id GROUP BY cohort_id
+-- SELECT id, name, email, cohort_id GROUP BY cohort_id  Wrong
