@@ -1,8 +1,8 @@
 SELECT
     assignments.id AS id,
-    assignments.name AS name,
-    assignments.day AS day,
-    assignments.chapter AS chapter,
+    name AS name,
+    day AS day,
+    chapter AS chapter,
     COUNT(assistance_requests.*) AS total_requests
 FROM
     assignments
