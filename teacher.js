@@ -21,10 +21,11 @@ FROM
     JOIN students ON student_id = students.id
     JOIN cohorts ON cohort_id = cohorts.id
 WHERE
-    cohorts.name = '${cohortName}'
+    cohorts.name = $1
 ORDER BY
     teacher;
-    `
+    `,
+      [cohortName]
     )
     .then((data) => {
       data.rows.forEach((user) => {
@@ -34,6 +35,6 @@ ORDER BY
     .catch((err) => console.log(err));
 };
 
-let cohortName = process.argv[2];
+let cohortName = `${process.argv[2]}`;
 
 getCohortWithTeacherAssists(cohortName);
